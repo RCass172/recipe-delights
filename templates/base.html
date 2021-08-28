@@ -1,21 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A community based recipe website for special occasions">
     <!-- Font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
-        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css" />
     <!-- Materialize css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         type="text/css">
+        <!-- Own css stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     <title>Recipe Delights</title>
 </head>
 
 <body>
+
+
+    <header>
+
+        <!-- Main navbar -->
+        <nav class="navbar">
+            <div class="nav-wrapper">
+                <a href="#" class="website-logo">
+                    <img src="{{url_for('static', filename='images/logo.png')}}" height="100%"/>
+                </a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger" title="nav menu"><i
+                        class="fas fa-bars"></i></a>
+                <!-- Dropdown Structure -->
+                <ul id="dropdown" class="dropdown-content">
+                    <li><a href="#!">Brunch</a></li>
+                    <li><a href="#!">Afternoon Tea</a></li>
+                    <li><a href="#!">Dinner Party</a></li>
+                    <li><a href="#!">Cocktails</a></li>
+                </ul>
+                <ul class="right hide-on-med-and-down">
+                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown">Recipes <i
+                                class="fas fa-sort-down"></i></a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Add Recipe</a></li>
+                    <li><a href="#">Favourites</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Side navbar -->
+        <ul class="sidenav collapsible" id="mobile-demo">
+            <li>
+                <div class="collapsible-header">Recipes <i class="fas fa-sort-down"></i></div>
+                <div class="collapsible-body">
+                    <ul>
+                        <li><a href="#!">Brunch</a></li>
+                        <li><a href="#!">Afternoon Tea</a></li>
+                        <li><a href="#!">Dinner Party</a></li>
+                        <li><a href="#!">Cocktails</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Register</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Add Recipe</a></li>
+            <li><a href="#">Favourites</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </header>
+
+
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Own JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 
 </html>
