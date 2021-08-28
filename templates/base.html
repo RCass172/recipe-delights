@@ -13,7 +13,7 @@
     <!-- Materialize css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         type="text/css">
-        <!-- Own css stylesheet -->
+    <!-- Own css stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     <title>Recipe Delights</title>
 </head>
@@ -22,12 +22,11 @@
 
 
     <header>
-
         <!-- Main navbar -->
         <nav class="navbar">
             <div class="nav-wrapper">
                 <a href="#" class="website-logo">
-                    <img src="{{url_for('static', filename='images/logo.png')}}" height="100%"/>
+                    <img src="{{url_for('static', filename='images/logo.png')}}" height="100%" />
                 </a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger" title="nav menu"><i
                         class="fas fa-bars"></i></a>
@@ -73,7 +72,43 @@
         </ul>
     </header>
 
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
 
+    <footer class="page-footer">
+        <div class="footer-container">
+            <div class="row">
+                <h4 class="cursive-text center-align">Follow Us</h5>
+                <div class="col s12">
+                    <!--Social media links-->
+                    <ul class="social-network center-align">
+                        <li>
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-instagram-square"></i><span class="sr-only">Instagram</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-facebook-square"></i><span class="sr-only">Facebook</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-twitter-square"></i><span class="sr-only">Twitter</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © Copyright 2021 Recipe Delights
+            </div>
+        </div>
+    </footer>
 
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"

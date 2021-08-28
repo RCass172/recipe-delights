@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Lato&family=Montserrat&display=swap');
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    flex: 1 0 auto;
+    background-color: #006466;
+}
+
 .navbar {
     background-color: #212f45;
     width: 100%;
@@ -5,4 +21,32 @@
 
 .navbar a {
     color: azure; 
+}
+
+.cursive-text {
+    font-family: 'Dancing Script', cursive;
+}
+
+/*------ Footer ---------*/
+.page-footer {
+    background-color: #212f45;
+}
+
+.page-footer .row {
+    margin: 0;
+}
+
+.social-network li {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.social-network i {
+    color: azure;
+    font-size: 45px;
+}
+
+.social-network i:hover {
+    color: #c4cad6;
 }
