@@ -1,9 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <!-- Hero image -->
+<!-- Hero image -->
     <div>
-        <img class="hero-img" src="{{url_for ('static', filename='images/hero-img.webp')}}" alt="table setting">
+        <div class="row">
+            <div class="hero-text">
+                <h3 class="cursive-text">Recipes to impress<br>your loved ones..</h3>
+            </div>
+            <div>
+                <img class="hero-img" src="{{ url_for ('static', filename='images/hero-img.webp') }}" alt="table setting">
+            </div>
+        </div>
     </div>
 
 {% endblock %}
