@@ -3,6 +3,7 @@ from flask import (
     Flask, render_template, redirect, url_for, session, request)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from werkzeug.security import generate_password_hash, check_password_hash
 # Imports the env package as it is hidden and not pushed to GitHub
 if os.path.exists("env.py"):
     import env
