@@ -4,7 +4,8 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    font-family: 'Lato', sans-serif;
+    
+    font-family: 'Montserrat', sans-serif;
     color: azure;
 }
 
@@ -15,6 +16,13 @@ main {
 
 .cursive-text {
     font-family: 'Dancing Script', cursive;
+}
+
+.heading-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+    text-align: center;
 }
 
 .white-text {
@@ -58,6 +66,14 @@ main {
     width: fit-content;
 }
 
+/*---- About section----*/
+.about-container {
+    background-color: rgba(11, 82, 91, 0.7);
+    margin: 50px;
+    padding: 20px;
+    font-size: 20px;
+}
+
 /*------ Footer ---------*/
 .page-footer {
     background-color: #212f45;
@@ -81,3 +97,12 @@ main {
 .social-network i:hover {
     color: #c4cad6;
 }
+
+/*---- Media queries for smaller screens ---*/
+@media only screen and (max-width: 600px) {
+    .about-container {
+        margin: 25px;
+        padding: 10px;
+        font-size: 20px;
+    }
+  }
