@@ -47,6 +47,26 @@ main {
     text-align: center;
 }
 
+.hero-btn {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: max-content;
+}
+
+.button {
+    background-color: rgba(77,25,77,0.5);
+    font-weight: bold;
+    padding: 30px;
+    margin-left: 15px;
+}
+
+.button:hover {
+    background-color: rgb(77, 25, 77);
+}
+
+
 /*----- Navbar -------*/
 
 .navbar {
@@ -95,7 +115,7 @@ main {
 }
 
 .social-network i:hover {
-    color: #c4cad6;
+    background-color: rgb(77, 25, 77);
 }
 
 /*---- Media queries for smaller screens ---*/
