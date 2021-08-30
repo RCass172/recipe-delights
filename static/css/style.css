@@ -5,6 +5,7 @@ body {
     min-height: 100vh;
     flex-direction: column;
     font-family: 'Lato', sans-serif;
+    color: azure;
 }
 
 main {
@@ -14,6 +15,10 @@ main {
 
 .cursive-text {
     font-family: 'Dancing Script', cursive;
+}
+
+.white-text {
+    color: azure;
 }
 
 /*----- Hero Img -------*/
@@ -27,7 +32,6 @@ main {
 
 .hero-text {
     position: absolute;
-    color: azure;
     z-index: 1;
     top: 30%;
     left: 50%;
@@ -42,8 +46,16 @@ main {
     width: 100%;
 }
 
-.navbar a {
-    color: azure; 
+.logo-text {
+    font-size: 25px;
+}
+
+.logo-img {
+    vertical-align: middle;
+}
+
+.brand-logo {
+    width: fit-content;
 }
 
 /*------ Footer ---------*/
@@ -63,7 +75,6 @@ main {
 }
 
 .social-network i {
-    color: azure;
     font-size: 45px;
 }
 
