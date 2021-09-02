@@ -29,6 +29,23 @@ main {
     color: azure;
 }
 
+.btn {
+    background-color: rgb(77,25,77);
+    font-weight: bold;
+    color: azure;
+}
+
+.btn:hover {
+    background-color: rgba(77,25,77,0.7);
+}
+
+.recipe-box img {
+    object-fit: cover;
+    width: 100%;
+    position: relative;
+    padding: 20px;
+}
+
 /*----- Hero Img -------*/
 
 .hero-img {

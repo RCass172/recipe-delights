@@ -25,11 +25,11 @@
         <!-- Main navbar -->
         <nav class="navbar">
             <div class="nav-wrapper">
-                <a href="#" class="cursive-text white-text brand-logo">
+                <a href="{{ url_for('home') }}" class="cursive-text white-text brand-logo">
                     <img src="{{url_for('static', filename='images/logo.png')}}" class="logo-img" height="40px"/>
                     <span class="logo-text">Recipe Delights</span> 
                 </a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger" title="nav menu"><i
+                <a href="{{ url_for('home') }}" data-target="mobile-demo" class="sidenav-trigger" title="nav menu"><i
                         class="fas fa-bars"></i></a>
                 <!-- Dropdown Structure -->
                 <ul id="dropdown" class="dropdown-content">

@@ -27,7 +27,8 @@ def home():
 
 @app.route("/recipe_categories")
 def recipe_categories():
-    return render_template("/recipes.html")
+    categories = list(mongo.db.categories.find().sort("category_name", 1))
+    return render_template("recipes.html", categories=categories)
 
 
 # How and where to run app
