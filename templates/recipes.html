@@ -11,6 +11,14 @@
                 {% for category in categories %}
                     <div class="col s12 m6 recipe-box center-align">
                         <img src="{{ category.category_img }}" alt="recipe category image">
+                        <div class="recipe-name">
+                            <h4 class="capitalize">{{ category.category_name }}</h4>
+                        </div>
+                        <div class="category-btn center-align">
+                            <div class="btn">Recipes</div>
+                            <div class="btn">Edit</div>
+                            <div class="btn">Delete</div>
+                        </div>
                     </div>
                 {% endfor %}
             </div>
