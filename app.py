@@ -25,21 +25,43 @@ def home():
     return render_template("index.html")
 
 
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    if request.method == "POST":
+        # Check if the username entered already exists
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            flash("Sorry! Username already exists, please choose again")
+            return redirect(url_for("register"))
+
+        register = {
+            "username": request.form.get("username").lower(),
+            "password": generate_password_hash(request.form.get("password"))
+        }
+        mongo.db.users.insert_one(register)
+
+        # Puts the new user into session
+        session["user"] = request.form.get("username").lower()
+        flash("Registration has been successful")
+        return redirect(url_for("profile", username=session["user"]))
+    return render_template("register.html")
+
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        # Check if the username entered
-        # already exists
+        # Check if the username entered already exists
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
         if existing_user:
             # Ensure the password matches
-            if check_password_hash(existing_user["password"],
-                request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    return redirect(url_for(
-                        "profile", username=session["user"]))
+            if check_password_hash(
+                    existing_user["password"], request.form.get("password")):
+                session["user"] = request.form.get("username").lower()
+                return redirect(url_for("profile", username=session["user"]))
             else:
                 # Invalid password
                 flash("Incorrect Username and/or Password")
