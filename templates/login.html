@@ -4,7 +4,7 @@
         <h1 class="heading-text">Login</h1>
     </div>
     <div class="row">
-        <form class="col s12 m10 offset-m1" method="POST" action="{{ url_for('login') }}">
+        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
             <div class="form-box">
                 <div class="row">
                     <div class="input-field col s12">
@@ -23,9 +23,17 @@
                     </div>
                 </div>
                 <div class="row">
-                    <button type="submit" class="btn">Submit</button>
+                    <button type="submit" class="btn">Login</button>
                 </div>
             </div>
         </form>
+    </div>
+    <div class="row form-alert">
+        <div class="col s12">
+            <p class="center-align">
+                Haven't created an account yet? 
+                <a href="#">Register here</a>
+            </p>
+        </div>
     </div>
 {% endblock %}

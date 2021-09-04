@@ -44,6 +44,21 @@ main {
     background-color: rgba(77,25,77,0.7);
 }
 
+/*---- Login/Recipe form ----*/
+
+.form-box {
+    background-color: rgba(11, 82, 91, 0.7);
+    text-align: center;
+    padding: 10px;
+}
+
+.form-alert a {
+    color: rgb(77,25,77);
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 18px;
+}
+
 /*-- Recipe categories --*/
 
 .recipe-box img {
