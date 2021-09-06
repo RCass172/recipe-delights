@@ -85,6 +85,14 @@ def profile(username):
     return redirect(url_for("login"))
 
 
+@app.route("/logout")
+def logout():
+    # Remove user from session
+    flash("You have successfully been logged out")
+    session.pop("user")
+    return redirect(url_for("login"))
+
+
 @app.route("/recipe_categories")
 def recipe_categories():
     categories = list(mongo.db.categories.find().sort("category_name", 1))
