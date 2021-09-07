@@ -19,6 +19,14 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+# Global variable used for categories to work on base.html
+# https://liutheprogrammer.wordpress.com/2019/09/18/flask-templates-define-global-variables-for-template-usage/
+@app.context_processor
+def category():
+    categories = list(mongo.db.categories.find())
+    return dict(categories=categories)
+
+
 @app.route("/")
 @app.route("/home")
 def home():
