@@ -29,6 +29,15 @@ main {
     color: azure;
 }
 
+.dark-text {
+    color: black;
+}
+
+.dark-banner {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+}
+
 .capitalize {
     text-transform: capitalize;
 }
