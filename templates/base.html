@@ -26,18 +26,18 @@
         <nav class="navbar">
             <div class="nav-wrapper">
                 <a href="{{ url_for('home') }}" class="cursive-text white-text brand-logo">
-                    <img src="{{url_for('static', filename='images/logo.png')}}" 
-                        alt="logo image of recipe book" class="logo-img" height="40px"/>
-                    <span class="logo-text">Recipe Delights</span> 
+                    <img src="{{url_for('static', filename='images/logo.png')}}" alt="logo image of recipe book"
+                        class="logo-img" height="40px" />
+                    <span class="logo-text">Recipe Delights</span>
                 </a>
                 <a href="{{ url_for('home') }}" data-target="mobile-demo" class="sidenav-trigger" title="nav menu"><i
                         class="fas fa-bars"></i></a>
                 <!-- Dropdown Structure -->
                 <ul id="dropdown" class="dropdown-content">
-                    <li><a href="#!">Brunch</a></li>
-                    <li><a href="#!">Afternoon Tea</a></li>
-                    <li><a href="#!">Dinner Party</a></li>
-                    <li><a href="#!">Cocktails</a></li>
+                    {% for category in categories %}
+                    <li><a href="{{ url_for('full_category', category_id=category._id) }}">
+                            {{ category.category_name }}</a></li>
+                    {% endfor %}
                 </ul>
                 <ul class="right hide-on-med-and-down">
                     <li><a class="dropdown-trigger" href="#!" data-target="dropdown">Recipes <i
@@ -58,10 +58,10 @@
                 <div class="collapsible-header">Recipes <i class="fas fa-sort-down"></i></div>
                 <div class="collapsible-body">
                     <ul>
-                        <li><a href="#!">Brunch</a></li>
-                        <li><a href="#!">Afternoon Tea</a></li>
-                        <li><a href="#!">Dinner Party</a></li>
-                        <li><a href="#!">Cocktails</a></li>
+                        {% for category in categories %}
+                            <li><a href="{{ url_for('full_category', category_id=category._id) }}">
+                                {{ category.category_name }}</a></li>
+                        {% endfor %}
                     </ul>
                 </div>
             </li>
@@ -77,15 +77,15 @@
     <section class="flash-msg">
         <!-- Flash messages displayed here -->
         {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="row">
-                        <h4 class="center-align">
-                            {{ message }}
-                        </h4>
-                    </div>
-                {% endfor %}
-            {% endif %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="row">
+            <h4 class="center-align">
+                {{ message }}
+            </h4>
+        </div>
+        {% endfor %}
+        {% endif %}
         {% endwith %}
     </section>
 

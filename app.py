@@ -99,12 +99,10 @@ def recipe_categories():
     return render_template("recipes.html", categories=categories)
 
 
-@app.route("/category/<category_id>")
-def category(category_id):
+@app.route("/full_category/<category_id>")
+def full_category(category_id):
     category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
-    recipes = mongo.db.recipes.find(
-        {"category_name": category["category_name"]})
-    return render_template("category.html", recipes=recipes, category=category)
+    return render_template("full_category.html", category=category)
 
 
 # How and where to run app
