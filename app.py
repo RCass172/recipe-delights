@@ -116,7 +116,7 @@ def full_category(category_id):
         "full_category.html", category=category, recipes=recipes)
 
 
-@app.route("/full_recipe/recipe_id")
+@app.route("/full_recipe/<recipe_id>")
 def full_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template(

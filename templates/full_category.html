@@ -21,7 +21,7 @@
                         <p>{{ recipe.recipe_description }}</p>
                     </div>
                     <div class="card-action center-align">
-                        <a class="btn" href="#">Go To Recipe</a>
+                        <a class="btn" href="{{ url_for('full_recipe', recipe_id=recipe._id)}}">Go To Recipe</a>
                     </div>
                 </div>
             </div>
