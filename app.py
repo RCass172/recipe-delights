@@ -123,6 +123,27 @@ def full_recipe(recipe_id):
         "full_recipe.html", recipe=recipe)
 
 
+@app.route("/add_recipe", methods=["GET", "POST"])
+def add_recipe():
+    if request.method == "POST":
+        user = mongo.db.users.find_one({"username": session["user"]})
+        recipe = {
+            "category_name": request.form.get("category_name"),
+            "recipe_img": request.form.get("recipe_img"),
+            "recipe_name": request.form.get("recipe_name"),
+            "recipe_description": request.form.get("recipe_description"),
+            "ingredients": request.form.getlist("ingredients"),
+            "method": request.form.getlist("method"),
+            "notes": request.form.get("notes"),
+            "created_by": ObjectId(user["_id"])
+        }
+        mongo.db.recipes.insert_one(recipe)
+        flash("Your recipe has been successfully added")
+        return redirect(url_for("profile"))
+
+    return render_template("add_recipe.html")
+
+
 # How and where to run app
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
