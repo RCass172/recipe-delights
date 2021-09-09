@@ -8,6 +8,7 @@
                     <span class="card-title dark-banner capitalize">{{ recipe.recipe_name }}</span>
                 </div>
                 <div class="card-content dark-text">
+                    <p><i>Created by: {{ recipe.created_by }}</i></p>
                     <p>{{ recipe.recipe_description }}</p>
                 </div>
                 <div class="div dark-text">
@@ -24,6 +25,7 @@
                     <!-- Creates notes/tips -->
                     <h5 class="center-align">Tips</h5>
                     <p>{{ recipe.notes }}</p>
+
                 </div>
                 <div class="card-action center-align">
                     <a class="btn" href="{{ url_for('full_recipe', recipe_id=recipe._id)}}">Go To Recipe</a>
