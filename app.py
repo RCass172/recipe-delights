@@ -116,6 +116,13 @@ def full_category(category_id):
         "full_category.html", category=category, recipes=recipes)
 
 
+@app.route("/full_recipe/recipe_id")
+def full_recipe(recipe_id):
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template(
+        "full_recipe.html", recipes=recipes)
+
+
 # How and where to run app
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

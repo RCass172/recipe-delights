@@ -15,9 +15,16 @@
                             <h4 class="capitalize">{{ category.category_name }}</h4>
                         </div>
                         <div class="category-btn center-align">
-                            <div class="btn">Recipes</div>
-                            <div class="btn">Edit</div>
-                            <div class="btn">Delete</div>
+                            <div class="row">
+                                <a class="btn white-text" 
+                                    href="{{ url_for('full_category', category_id=category._id) }}">Recipes</a>
+                            </div>
+                            <div class="row">
+                                <a class="btn white-text" href="#">Edit</a>
+                            </div>
+                            <div class="row">
+                                <a class="btn white-text" href="#">Delete</a>
+                            </div>
                         </div>
                     </div>
                 {% endfor %}
