@@ -120,7 +120,7 @@ def full_category(category_id):
 def full_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template(
-        "full_recipe.html", recipes=recipes)
+        "full_recipe.html", recipe=recipe)
 
 
 # How and where to run app
