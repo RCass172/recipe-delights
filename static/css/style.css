@@ -38,6 +38,16 @@ main {
     width: 100%;
 }
 
+.recipe-card {
+    background-color: #212f45;
+    padding: 20px;
+}
+
+.recipe-banner {
+    background-color: rgb(77,25,77);
+    padding: 10px;
+}
+
 .capitalize {
     text-transform: capitalize;
 }

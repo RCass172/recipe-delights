@@ -1,34 +1,35 @@
 {% extends "base.html" %}
 {% block content %}
+    <div>
+        <h1 class="center-align recipe-banner heading-text capitalize">{{ recipe.recipe_name }}</h1>
+    </div>
     <div class="row">
         <div class="col s12 m8 offset-m2">
             <div class="card">
                 <div class="card-image">
                     <img src="{{ recipe.recipe_img }}" alt="recipe image">
-                    <span class="card-title dark-banner capitalize">{{ recipe.recipe_name }}</span>
+                    <span class="card-title dark-banner capitalize"><i>Created by: {{ recipe.created_by }}</i></span>
                 </div>
-                <div class="card-content dark-text">
-                    <p><i>Created by: {{ recipe.created_by }}</i></p>
-                    <p>{{ recipe.recipe_description }}</p>
-                </div>
-                <div class="div dark-text">
-                    <!-- Create the list of ingredients -->
-                    <h5 class="center-align">Ingredients:</h5>
-                    {% for ingredient in recipe.ingredients %}
-                        <p class="center-align">{{ ingredient }}</p>
-                    {% endfor %}
-                    <!-- Create the list of steps -->
-                    <h5 class="center-align">Method:</h5>
-                    {% for step in recipe.method %}
-                        <p>{{ step }}</p>
-                    {% endfor %}
-                    <!-- Creates notes/tips -->
-                    <h5 class="center-align">Tips</h5>
-                    <p>{{ recipe.notes }}</p>
+                <div class="recipe-card">
+                    <div class="card-content">
+                        <p>{{ recipe.recipe_description }}</p>
+                    </div>
+                    <div>
+                        <!-- Create the list of ingredients -->
+                        <h5 class="center-align recipe-banner">Ingredients:</h5>
+                        {% for ingredient in recipe.ingredients %}
+                            <p class="center-align">{{ ingredient }}</p>
+                        {% endfor %}
+                        <!-- Create the list of steps -->
+                        <h5 class="center-align recipe-banner">Method:</h5>
+                        {% for step in recipe.method %}
+                            <p>{{ step }}</p>
+                        {% endfor %}
+                        <!-- Creates notes/tips -->
+                        <h5 class="center-align recipe-banner">Tips</h5>
+                        <p>{{ recipe.notes }}</p>
 
-                </div>
-                <div class="card-action center-align">
-                    <a class="btn" href="{{ url_for('full_recipe', recipe_id=recipe._id)}}">Go To Recipe</a>
+                    </div>
                 </div>
             </div>
         </div>
