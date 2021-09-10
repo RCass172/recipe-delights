@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+
     <h1 class="cursive-text capitalize center-align">Welcome {{ username }}</h1>
 
     <div class="row center-align">
@@ -8,4 +9,24 @@
             <a class="btn" href="{{ url_for('add_recipe')}}">Add Recipe</a>
         </div>
     </div>
+
+    <div class="row">
+        {% for recipe in user_recipes %}
+            <div class="col s12 m8 offset-m2">
+                <div class="card recipe-card">
+                    <div class="card-image">
+                        <img src="{{ recipe.recipe_img }}" alt="recipe image">
+                        <span class="card-title dark-banner capitalize">{{ recipe.recipe_name }}</span>
+                    </div>
+                    <div class="card-content">
+                        <p>{{ recipe.recipe_description }}</p>
+                    </div>
+                    <div class="card-action center-align">
+                        <a class="btn" href="{{ url_for('full_recipe', recipe_id=recipe._id)}}">Go To Recipe</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
 {% endblock %}
