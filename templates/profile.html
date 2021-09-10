@@ -5,8 +5,10 @@
 
     <div class="row center-align">
         <div class="col s12">
-            <h2 class="heading-text">My Recipes</h2>
-            <a class="btn" href="{{ url_for('add_recipe')}}">Add Recipe</a>
+            <h2 class="heading-text recipe-banner">My Recipes</h2>
+            <a class="btn" href="{{ url_for('add_recipe')}}">
+                <i class="fas fa-plus"></i> Add Recipe
+            </a>
         </div>
     </div>
 
@@ -23,6 +25,8 @@
                     </div>
                     <div class="card-action center-align">
                         <a class="btn" href="{{ url_for('full_recipe', recipe_id=recipe._id)}}">Go To Recipe</a>
+                        <a class="btn" href="{{ url_for('delete_recipe', recipe_id=recipe._id)}}">Delete Recipe</a>
+                        <a class="btn" href="#">Edit Recipe</a>
                     </div>
                 </div>
             </div>
