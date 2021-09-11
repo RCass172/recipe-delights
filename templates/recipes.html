@@ -3,11 +3,11 @@
 
     <div class="row">
         <div class="col s12">
-            <h1 class="heading-text"><i class="fas fa-book-open"></i> Recipes</h1>
+            <h1 class="heading-text"><i class="fas fa-book-open"></i> Recipe Categories</h1>
             <div class="row">
                 {% if session.user|lower == "admin" %}
                     <div class="center-align">
-                        <a class="btn white-text center-align" href="#">Add Category</a>
+                        <a class="btn white-text center-align" href="{{ url_for('add_category') }}">Add Category</a>
                     </div>
                 {% endif %}
                 {% for category in categories %}
