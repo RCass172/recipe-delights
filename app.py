@@ -174,6 +174,20 @@ def edit_recipe(recipe_id):
     return render_template("edit_recipe.html", recipe=recipe)
 
 
+@app.route("/add_category", methods=["GET", "POST"])
+def add_category():
+    if request.method == "POST":
+        category = {
+            "category_name": request.form.get("category_name"),
+            "category_img": request.form.get("category_img"),
+        }
+        mongo.db.categories.insert_one(category)
+        flash("Your category has been added successfully")
+        return redirect(url_for("recipe_categories"))
+
+    return render_template("add_category.html")
+
+
 # How and where to run app
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

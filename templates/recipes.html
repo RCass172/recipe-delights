@@ -5,9 +5,11 @@
         <div class="col s12">
             <h1 class="heading-text"><i class="fas fa-book-open"></i> Recipes</h1>
             <div class="row">
-                <div class="center-align">
-                    <a class="btn white-text center-align" href="#">Add Category</a>
-                </div>
+                {% if session.user|lower == "admin" %}
+                    <div class="center-align">
+                        <a class="btn white-text center-align" href="#">Add Category</a>
+                    </div>
+                {% endif %}
                 {% for category in categories %}
                     <div class="col s12 m6 recipe-box center-align">
                         <img src="{{ category.category_img }}" alt="recipe category image">
