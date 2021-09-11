@@ -115,18 +115,6 @@ main {
     width: -webkit-fill-available;
 }
 
-@media only screen and (min-width: 1000px) {
-    .category-btn {
-        width: min-content;
-        left: 35%;
-        bottom: 0;
-    }
-
-    .btn {
-        margin: 20px;
-    }
-}
-
 /*----- Hero Img -------*/
 
 .hero-img {

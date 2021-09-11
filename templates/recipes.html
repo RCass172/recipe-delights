@@ -18,12 +18,12 @@
                             <div class="row">
                                 <a class="btn white-text" 
                                     href="{{ url_for('full_category', category_id=category._id) }}">Recipes</a>
-                            </div>
-                            <div class="row">
-                                <a class="btn white-text" href="#">Edit</a>
-                            </div>
-                            <div class="row">
-                                <a class="btn white-text" href="#">Delete</a>
+                                {% if session.user|lower == "admin" %}
+                                    <a class="btn white-text" 
+                                        href="#"><i class="far fa-edit"></i></a>
+                                    <a class="btn white-text" 
+                                        href="#"><i class="far fa-trash-alt"></i></a>
+                                {% endif %}
                             </div>
                         </div>
                     </div>
