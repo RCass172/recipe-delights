@@ -17,3 +17,14 @@ let ingredient = 1;
             <input id="ingredients${ingredient}" name="ingredients" type="text" class="validate" minlength="3" required>
             <label for="ingredients${ingredient}">Add Another Ingredient</label></div>`);
     });
+
+let method = 1;
+
+    $(".add-method").click(function (e) {
+        e.preventDefault();
+            ingredient++;
+            $(".new-method").append(`
+            <div class="input-field">
+            <input id="method${method}" name="method" type="text" class="validate" minlength="3" required>
+            <label for="method${method}">Add Another Ingredient</label></div>`);
+    });
