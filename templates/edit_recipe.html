@@ -1,4 +1,82 @@
 {% extends "base.html" %}
 {% block content %}
-    <h1>Edit recipe</h1>
+    <div>
+        <h1 class="heading-text">Edit Recipe</h1>
+    </div>
+    <div class="row">
+        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
+            <div class="form-box">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <select id="category_name" name="category_name" class="validate" required>
+                            <option value="" disabled selected>Choose Recipe Category</option>
+                            {% for category in categories %}
+                                {% if category.category_name == recipe.category_name %}
+                                    <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                                {% else %}
+                                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="recipe_name" name="recipe_name" type="text" minlength="4" maxlength="75"
+                            value="{{ recipe.recipe_name }}" class="validate" required>
+                        <label for="recipe_name">Recipe Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="recipe_description" name="recipe_description" type="text" minlength="4" maxlength="200"
+                            value="{{ recipe.recipe_description }}" class="validate" required>
+                        <label for="recipe_description">Description</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <!-- Default image added -->
+                        <input id="recipe_img" name="recipe_img" type="text" class="validate"
+                            value="https://images.pexels.com/photos/4577179/pexels-photo-4577179.jpeg?cs=srgb&dl=pexels-rachel-claire-4577179.jpg&fm=jpg">
+                        <label for="recipe_img">Recipe Image URL - Default added or paste your own</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        {% for ingredient in recipe.ingredients %}
+                        <input id="ingredients" name="ingredients" type="text" minlength="3" value="{{ ingredient }}"
+                            class="validate" required>
+                        <label for="ingredients">Ingredient</label>
+                        {% endfor %}
+                        <!-- Add new ingredient -->
+                        <div class="new-ingredient"></div>
+                        <button type="button" class="btn add-ingredient"><i class="fas fa-plus"></i> Add Ingredient</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        {% for method in recipe.method %}
+                        <input id="method" name="method" type="text" minlength="3" class="validate" value="{{ method }}"
+                            required>
+                        <label for="method">Method</label>
+                        {% endfor %}
+                        <!-- Add new method -->
+                        <div class="new-method"></div>
+                        <button type="button" class="btn add-method"><i class="fas fa-plus"></i> Add Step</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="notes" name="notes" type="text" minlength="3" class="validate" value="{{ recipe.notes }}"
+                            required>
+                        <label for="notes">Tips/Notes</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <button type="submit" class="btn">Edit Recipe</button>
+                </div>
+            </div>
+        </form>
+    </div>
 {% endblock %}
