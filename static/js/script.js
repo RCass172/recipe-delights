@@ -16,7 +16,7 @@ $(".add-ingredient").click(function (e) {
             <div class="input-field">
             <input id="ingredients${ingredient}" name="ingredients" type="text" class="validate" minlength="3" required>
             <label for="ingredients${ingredient}">Add Another Ingredient</label>
-            <button type="button" class="btn delete-ingredient">Delete Ingredient</button></div>`);
+            <button type="button" class="btn delete-ingredient"><i class="far fa-trash-alt"></i> Delete Ingredient</button></div>`);
 });
 
 // Delete individual ingredient
@@ -35,7 +35,7 @@ $(".add-method").click(function (e) {
             <div class="input-field">
             <input id="method${method}" name="method" type="text" class="validate" minlength="3" required>
             <label for="method${method}">Add Another Step</label>
-            <button type="button" class="btn delete-method">Delete Step</button></div>`);
+            <button type="button" class="btn delete-method"><i class="far fa-trash-alt"></i> Delete Step</button></div>`);
 });
 
 // Delete individual step
