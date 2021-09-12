@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+    <div>
+        <h1 class="heading-text">Edit Category</h1>
+    </div>
+    <div class="row">
+        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('edit_category', category_id=category._id) }}">
+            <div class="form-box">
+                <!-- Edit category name -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="category_name" name="category_name" type="text" class="validate"
+                            value="{{ category.category_name }}">
+                        <label for="category_name">Category Name</label>
+                    </div>
+                </div>
+                <!-- Edit category image -->           
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="category_img" name="category_img" type="text" class="validate"
+                            value="{{ category.category_img }}">
+                        <label for="category_img">Category Image URL</label>
+                    </div>
+                </div>
+                <!-- Submit edited category -->
+                <div class="row">
+                    <button type="submit" class="btn">Edit Recipe</button>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

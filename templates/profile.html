@@ -7,7 +7,7 @@
         <div class="col s12">
             <h2 class="heading-text recipe-banner">My Recipes</h2>
             {% if session.user == "admin" %}
-                <a class="btn" href="{{ url_for('recipe_categories')}}">Go To Catagories</a>
+                <a class="btn" href="{{ url_for('recipe_categories')}}">Go To Categories</a>
             {% endif %}
             <a class="btn" href="{{ url_for('add_recipe')}}">
                 <i class="fas fa-plus"></i> Add Recipe</a>
