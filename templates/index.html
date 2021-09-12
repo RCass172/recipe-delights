@@ -13,7 +13,11 @@
             <div class="row">
                 <div class="hero-btn">
                     <a href="{{ url_for('recipe_categories') }}" class="button white-text">Inspire Me</a>
-                    <a href="{{ url_for('login') }}" class="button white-text">Login</a>
+                    {% if session.user %}
+                        <a href="{{ url_for('profile', username=session['user']) }}" class="button white-text">Profile</a>
+                    {% else %}
+                        <a href="{{ url_for('login') }}" class="button white-text">Login</a>
+                    {% endif %}
                 </div>
             </div>
         </div>
