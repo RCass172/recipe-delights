@@ -128,7 +128,6 @@ def full_recipe(recipe_id):
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
-        user = mongo.db.users.find_one({"username": session["user"]})
         recipe = {
             "category_name": request.form.get("category_name"),
             "recipe_img": request.form.get("recipe_img"),
@@ -193,6 +192,21 @@ def delete_category(category_id):
     mongo.db.categories.remove({"_id": ObjectId(category_id)})
     flash("Category has been deleted Successfully")
     return redirect(url_for("recipe_categories"))
+
+
+@app.route("/edit_category/<category_id>", methods=["GET", "POST"])
+def edit_category(category_id):
+    if request.method == "POST":
+        edit = {
+            "category_name": request.form.get("category_name"),
+            "category_img": request.form.get("category_img")
+        }
+        mongo.db.categories.update({"_id": ObjectId(category_id)}, edit)
+        flash("Category has been updated Successfully")
+        return redirect(url_for("recipe_categories"))
+
+    category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
+    return render_template("edit_category.html", category=category)
 
 
 # How and where to run app
