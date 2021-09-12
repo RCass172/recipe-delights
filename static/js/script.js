@@ -44,3 +44,22 @@ $("form").on("click", ".delete-method", function(e) {
     $(this).parent('div').remove();
     x--;
 });
+
+// scroll to top button
+// help taken from https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+btn = document.getElementById("topBtn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+}
+
+function topScroll() {
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0; 
+}
