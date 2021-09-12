@@ -41,11 +41,16 @@ main {
 .recipe-card {
     background-color: #212f45;
     padding: 25px;
+    margin: 20px;
 }
 
 .recipe-banner {
     background-color: rgb(77,25,77);
     padding: 10px;
+}
+
+.card .card-title {
+    font-size: 18px;
 }
 
 .capitalize {
