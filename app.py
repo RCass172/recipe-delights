@@ -188,6 +188,13 @@ def add_category():
     return render_template("add_category.html")
 
 
+@app.route("/delete_category/<category_id>")
+def delete_category(category_id):
+    mongo.db.categories.remove({"_id": ObjectId(category_id)})
+    flash("Category has been deleted Successfully")
+    return redirect(url_for("recipe_categories"))
+
+
 # How and where to run app
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
