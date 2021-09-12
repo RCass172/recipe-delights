@@ -115,6 +115,10 @@ main {
     width: -webkit-fill-available;
 }
 
+.category-msg {
+    padding: 20px;
+}
+
 /*----- Hero Img -------*/
 
 .hero-img {

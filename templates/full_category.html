@@ -27,5 +27,12 @@
             </div>
         </div>
     {% endfor %}
+    {% if recipes.count() == 0 %}
+        <div class="center-align dark-banner category-msg">
+            <h2>No Recipes Added Yet :(</h2>
+            <a class="btn" href="{{ url_for('add_recipe')}}">
+                <i class="fas fa-plus"></i> Add Recipe</a>
+        </div>
+    {% endif %}
 
 {% endblock %}
