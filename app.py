@@ -216,6 +216,23 @@ def edit_category(category_id):
     return render_template("edit_category.html", category=category)
 
 
+# Help regarding error pages taken from:
+# https://flask-doc.readthedocs.io/en/latest/patterns/errorpages.html
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
+
+@app.errorhandler(403)
+def forbidden(e):
+    return render_template('403.html'), 403
+
+
+@app.errorhandler(500)
+def internal_server_error(e):
+    return render_template('500.html'), 500
+
+
 # How and where to run app
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
