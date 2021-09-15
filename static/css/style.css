@@ -196,6 +196,21 @@ main {
     width: fit-content;
 }
 
+.sidenav, .sidenav li, .sidenav a {
+    background-color: #212f45 !important;
+    color: azure !important;
+    width: 200px;
+}
+
+#dropdown, #dropdown a {
+    background-color: #212f45 !important;
+    color: azure !important;
+}
+
+header {
+    height: 56px;
+}
+
 /*---- About section----*/
 .about-container {
     background-color: rgba(11, 82, 91, 0.7);
