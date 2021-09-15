@@ -22,7 +22,7 @@
 - [Testing](#testing)
 - [Deployment](#deployment)
 - [Credits](#credits)
-- [Acknowledgements](#acknowledgements)
+- [Acknowledgments](#acknowledgments)
 
 ---
 
@@ -45,12 +45,12 @@ As a user I would like:
 5. To be able to register an account
 6. The ability to search for specific recipes
 7. To be able to log in or log out as needed
-8. The option to add favourited recipes to own profile account
+8. The option to easily print recipes 
 9. To easily add a new recipe to any recipe category
 10. To easily edit or delete any added recipes as needed
 11. Informative validation feedback
 12. To have the ability to add a new recipe category when logged in as admin
-13. To have the abilty to edit or delete any existing recipe categories as needed when logged in as admin
+13. To have the ability to edit or delete any existing recipe categories as needed when logged in as admin
 
 ## **Wireframes**
 
@@ -103,4 +103,4 @@ As a user I would like:
 
 ---
 
-# **Acknowledgements**
+# **Acknowledgments**
