@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <div class="row center-align">
+    <p class="error-text">Opps! You're Not Allowed On This Page :(</p>
+    <a class="btn" href="{{ url_for('home') }}">Take Me Back Home</a>
+  </div>
+  <div class="row">
+    <img class="error-img" src="{{url_for('static', filename='images/error.webp')}}" alt="error image">
+  </div>
+</div>
+{% endblock %}
