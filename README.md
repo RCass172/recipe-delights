@@ -1,8 +1,8 @@
 # **Recipe Delights**
 
-[webpage layout on devices](#)
+![webpage layout on devices](static/images/README/device-layout.png)
 
-[Link to Website](#)
+[Link to Website](https://recipe-delights-ms3.herokuapp.com/)
 
 ---
 
