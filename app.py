@@ -103,6 +103,13 @@ def logout():
     return redirect(url_for("login"))
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    recipes = list(mongo.db.recipe.find({"$text": {"$search": query}}))
+    return render_template("found_recipes.html", recipes=recipes)
+
+
 @app.route("/recipe_categories")
 def recipe_categories():
     categories = list(mongo.db.categories.find().sort("category_name", 1))
