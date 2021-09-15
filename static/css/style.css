@@ -69,6 +69,10 @@ main {
     background-color: rgba(77,25,77,0.7);
 }
 
+.print-btn {
+    margin: 15px;
+}
+
 /*--- flash messages ----*/
 
 .flash-msg {

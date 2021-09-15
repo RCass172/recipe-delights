@@ -10,7 +10,11 @@
                     <img src="{{ recipe.recipe_img }}" alt="recipe image">
                     <span class="card-title dark-banner capitalize"><i>Created by: {{ recipe.created_by }}</i></span>
                 </div>
-                <div class="">
+                <!-- Create print button -->
+                <div class="col s12 center-align">
+                    <button class="btn print-btn" onclick="window.print()"><i class="fas fa-print"></i> Print</button>
+                </div>
+                <div>
                     <div class="card-content">
                         <p>{{ recipe.recipe_description }}</p>
                     </div>
