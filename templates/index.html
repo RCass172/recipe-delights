@@ -1,46 +1,64 @@
 {% extends "base.html" %}
 {% block content %}
 
-<!-- Hero image -->
-    <div>
-        <div class="row">
-            <div class="hero-text">
-                <h3 class="cursive-text">Recipes to impress<br>your loved ones..</h3>
-            </div>
-            <div>
-                <img class="hero-img" src="{{ url_for ('static', filename='images/hero-img.webp') }}" alt="table setting">
-            </div>
-            <div class="row">
-                <div class="hero-btn">
-                    <a href="{{ url_for('recipe_categories') }}" class="button white-text">Inspire Me</a>
-                    {% if session.user %}
-                        <a href="{{ url_for('profile', username=session['user']) }}" class="button white-text">Profile</a>
-                    {% else %}
-                        <a href="{{ url_for('login') }}" class="button white-text">Login</a>
-                    {% endif %}
+    <!-- search bar -->
+    <div class="row search-bar">
+        <div class="col s12 m10 offset-m1">
+            <form action="{{ url_for('search') }}" method="post">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-search prefix"></i>
+                        <input type="text" name="query" id="query" class="validate" minlength="3" required>
+                        <label for="query">Search recipes by ingredient</label>
+                    </div>
                 </div>
-            </div>
+                <div class="center-align">
+                    <button class="btn search-btn" type="submit">Search</button>
+                </div>
+            </form>
         </div>
     </div>
 
-    <div class="row">
-        <h3 class="heading-text"><i class="fas fa-info-circle"></i> About Us</h3>
-        <div class="about-container">
-            <p>
-                We are a community based family sharing recipes to take the
-                stress out of cooking for those special occasions to impress
-                our family and friends.<br>
-                Whether you are here for just a look we have lots of different
-                recipes to tantalise those taste buds, or if you decide to
-                join our community and register an account you'll have the
-                option to add your own recipes and share them with other food 
-                lovers here at Recipe Delights.<br>
-                And most importantly have fun, be nice and enjoy!
-            </p>
+    <!-- Hero image -->
+        <div>
+            <div class="row">
+                <div class="hero-text">
+                    <h3 class="cursive-text">Recipes to impress<br>your loved ones..</h3>
+                </div>
+                <div>
+                    <img class="hero-img" src="{{ url_for ('static', filename='images/hero-img.webp') }}" alt="table setting">
+                </div>
+                <div class="row">
+                    <div class="hero-btn">
+                        <a href="{{ url_for('recipe_categories') }}" class="button white-text">Inspire Me</a>
+                        {% if session.user %}
+                            <a href="{{ url_for('profile', username=session['user']) }}" class="button white-text">Profile</a>
+                        {% else %}
+                            <a href="{{ url_for('login') }}" class="button white-text">Login</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="row center-align">
-            <a class="btn white-text" href="{{ url_for('register') }}">Register Now</a>
+
+        <div class="row">
+            <h3 class="heading-text"><i class="fas fa-info-circle"></i> About Us</h3>
+            <div class="about-container">
+                <p>
+                    We are a community based family sharing recipes to take the
+                    stress out of cooking for those special occasions to impress
+                    our family and friends.<br>
+                    Whether you are here for just a look we have lots of different
+                    recipes to tantalise those taste buds, or if you decide to
+                    join our community and register an account you'll have the
+                    option to add your own recipes and share them with other food 
+                    lovers here at Recipe Delights.<br>
+                    And most importantly have fun, be nice and enjoy!
+                </p>
+            </div>
+            <div class="row center-align">
+                <a class="btn white-text" href="{{ url_for('register') }}">Register Now</a>
+            </div>
         </div>
-    </div>
 
 {% endblock %}

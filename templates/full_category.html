@@ -1,6 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
 
+    <!-- search bar -->
+    <div class="row search-bar">
+        <div class="col s12 m10 offset-m1">
+            <form action="{{ url_for('search') }}" method="post">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-search prefix"></i>
+                        <input type="text" name="query" id="query" class="validate" minlength="3" required>
+                        <label for="query">Search recipes by ingredient</label>
+                    </div>
+                </div>
+                <div class="center-align">
+                    <button class="btn search-btn" type="submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <div class="row">
         <div>
             <img class="hero-img" src="{{ category.category_img }}" alt="recipe category image">

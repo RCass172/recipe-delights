@@ -73,6 +73,18 @@ main {
     margin: 15px;
 }
 
+/*---- Search bar ------*/
+
+.search-bar {
+    background-color: #212f45;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.search-btn {
+    margin-bottom: 10px;
+}
+
 /*--- flash messages ----*/
 
 .flash-msg {
@@ -139,7 +151,7 @@ main {
 .hero-text {
     position: absolute;
     z-index: 1;
-    top: 30%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -147,7 +159,7 @@ main {
 
 .hero-btn {
     position: absolute;
-    bottom: 30%;
+    bottom: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: max-content;
