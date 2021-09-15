@@ -275,6 +275,16 @@ header {
     color: #f05322;
   }
 
+/*---- Error pages -----*/
+.error-img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.error-text {
+    font-size: 35px;
+}
+
 /*---- Media queries for smaller screens ---*/
 @media only screen and (max-width: 600px) {
     .about-container {
