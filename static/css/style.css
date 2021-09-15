@@ -118,6 +118,10 @@ main {
     position: relative;
 }
 
+.recipe-box h2 {
+    font-size: 30px;
+}
+
 .recipe-name {
     position: absolute;
     top: 0;
@@ -227,6 +231,11 @@ header {
 
 .page-footer .row {
     margin: 0;
+}
+
+.page-footer p {
+    font-size: 30px;
+    margin: 15px;
 }
 
 .social-network li {
