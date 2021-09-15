@@ -85,6 +85,10 @@ main {
     margin-bottom: 10px;
 }
 
+.search-bar label {
+    color: azure;
+}
+
 /*--- flash messages ----*/
 
 .flash-msg {
