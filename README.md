@@ -196,6 +196,8 @@ I used MongoDB to store all the relevant data for the website. Below is the sche
 
 # **Testing**
 
+You can find all testing information [here](https://github.com/RCass172/recipe-delights/blob/main/TESTING.md)
+
 ---
 
 # **Deployment**

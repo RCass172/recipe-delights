@@ -45,9 +45,9 @@
                 <div class="row">
                     <div class="input-field col s12">
                         {% for ingredient in recipe.ingredients %}
-                        <input id="ingredients" name="ingredients" type="text" minlength="3" value="{{ ingredient }}"
+                        <input id="ingredients{{loop.index}}" name="ingredients{{loop.index}}" type="text" minlength="3" value="{{ ingredient }}"
                             class="validate" required>
-                        <label for="ingredients">Ingredient</label>
+                        <label for="ingredients{{loop.index}}">Ingredient</label>
                         {% endfor %}
                         <!-- Add new ingredient -->
                         <div class="new-ingredient"></div>
@@ -57,9 +57,9 @@
                 <div class="row">
                     <div class="input-field col s12">
                         {% for method in recipe.method %}
-                        <input id="method" name="method" type="text" minlength="3" class="validate" value="{{ method }}"
+                        <input id="method{{loop.index}}" name="method{{loop.index}}" type="text" minlength="3" class="validate" value="{{ method }}"
                             required>
-                        <label for="method">Method</label>
+                        <label for="method{{loop.index}}">Method</label>
                         {% endfor %}
                         <!-- Add new method -->
                         <div class="new-method"></div>
