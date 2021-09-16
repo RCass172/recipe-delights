@@ -75,7 +75,83 @@ As a user I would like:
 
 ## **Current Features**  
 
+### **Registered And Non Registered Users**
+
+- Navigation Bar
+  - The website has a fixed navbar with clickable logo and website name which will take the user back to the homepage
+  - There is a dropdown for the recipes which have all recipe categories
+  - There is a register and login button for users depending if it's a new or returning user
+  - The navbar is responsive when on smaller devices from ipads down with menu items being shown once the burger icon is clicked
+
+- Responsive Layout
+  - The layout is responsive on all different sized devices from mobiles to desktops, in order to make all content easily readable and for best aesthetics
+
+- Search Bar
+  - A search bar is included just under the navbar for users to easily find any recipe they are looking for. I used MongoDB's indexes to allow users to find any recipe by name or ingredient
+
+- Flash Messages
+  - All messages confirming any user actions are displayed underneath the navbar to let users know whether their action was successful or not. As below a new user who tries a username already in database will get the below message so they can try again
+
+    ![Flash Message](static/images/README/flash-msg.png)
+
+- Buttons
+  - All buttons were styled the same for a consistant look throughout the website
+  - On hovering over any button the background color will change to give visual feedback to the user
+
+- Print Button
+  - I added a print button which is found on all full recipes to allow the user to easily print the page if needed
+
+- Back To Top
+  - I created a back to top button which shows once the user scrolls down. This is in order for the user to easily navigate back to the top of the page if needed
+  - This has a hover effect which changes color to give visual feedback to user
+
+    ![Back To Top](static/images/README/back-to-top.png)
+
+- Footer
+  - The footer which is fixed to the buttom of page includes the social media links for user to follow. These links use a hover effect for visual feedback and on clicking will open a new tab
+
+- Error pages
+  - Error pages have been made in case of pages not being found, no authorisation to enter a certain page or server being down. A button to take user back to the homepage is also present
+  - All have the same layout as below error 404 but with relevant messages, i.e "You're not allowed on this page" for an error 403 and "Something happened the server" for error 500
+
+    ![Error Page](static/images/README/error-page.png)
+
+### **Registered Users Only**
+
+All registered users have all the above features with added:
+
+- User Profile
+  - On registering or logging in a user is brought to their homepage where any recipes they add will be saved.
+  - An added nav menu item of "Add Recipe" is now visable to users logged in to easily add a new recipe. A button is also shown once the user is on their profile page to make is easy to add a recipe
+
+    ![Add Button](static/images/README/add-btn.png)
+
+- Recipe Management
+  - Once users are logged in and created their own recipe they will now have the option to edit or delete any of their own recipes. This is easily done on their profile page with a "delete recipe", "edit recipe" or "go to recipe" buttons on each recipe card
+  - This now completes the basic CRUD functions of allowing a user to create, read, edit and delete a recipe.
+
+    ![user management](static/images/README/user-management.png)
+
+### **Admin User**
+
+Once logged in as an admin user all the above feature are relevant plus:
+
+- Admin Management
+  - Once on the admin profile page the user has the power to add, edit or delete any recipe categories by clicking on "Go To Category" button
+  - Buttons to "Add Category", "Edit" and "Delete" are found on the recipe categories page which is only visable to an admin user
+
+    ![Admin Category](static/images/README/admin-category.png)
+
 ## **Future Features**
+
+- Favorite Recipes
+  - As seen in my initial wireframes above I had hoped to include a favorite button to the recipes in order for users to save them to their profile. Unfortunatly due to lack of time and knowledge it wasn't something I was able to implement but would love to add in the future. This would allow users to save their favorite recipes and easily find them at a later date
+
+- Ratings and Comments
+  - I would love to add a rating system and comment section to each recipe to help users better interact with others on the website and to get a better understanding of each recipe
+
+- Delete Profile
+  - I would love to add the ability for a user to be able to delete their account if needed, which would in turn remove their user details and any recipes they may have added
 
 ---
 
