@@ -167,7 +167,30 @@ I used MongoDB to store all the relevant data for the website. Below is the sche
 
 ## **Languages**
 
+- [HTML](https://en.wikipedia.org/wiki/HTML)
+- [CSS](https://en.wikipedia.org/wiki/CSS)
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+- [Python](https://www.python.org/)
+- [Jinja](https://jinja.palletsprojects.com/en/3.0.x/)
+- [JQuery](https://jquery.com/)
+
 ## **Frameworks And Libraries**
+
+- [Materialize v1.0.0](https://materializecss.com/getting-started.html) - used for responsive pages  
+- [Cloud Convert](https://cloudconvert.com/webp-converter) - used to compress images for better performance by converting to webp files
+- [Fontawesome](https://fontawesome.com/)- used for the icons 
+- [Google Fonts](https://fonts.google.com/) - Lato/Roboto/Dancing Script was used on website, imported to the style.css file
+- [Pexels](https://www.pexels.com/)
+- [Balsamiq](https://balsamiq.com/) - used to create wireframes
+- [DBDiagram](https://dbdiagram.io/home) - used to create database schema
+- [Favicon Generator](https://www.favicon-generator.org/) - used to create the favicons
+- [MongoDB](https://www.mongodb.com/) - database used to store all website data
+- [Flask](https://flask.palletsprojects.com/en/2.0.x/) - framework used
+- [Heroku](https://www.heroku.com/home) - cloud platform used to deploy the website
+- [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/) - used for password hashing and authentication
+- [Git](https://git-scm.com/) - used for version control
+- [Gitpod](https://www.gitpod.io/) - used to write code before pushing to GitHub for storage
+- [GitHub](https://github.com/) - used to host website
 
 ---
 
