@@ -217,7 +217,7 @@ main {
 }
 
 header {
-    height: 56px;
+    height: 64px;
 }
 
 /*---- About section----*/
@@ -292,5 +292,9 @@ header {
         margin: 25px;
         padding: 10px;
         font-size: 20px;
+    }
+
+    header {
+        height: 56px;
     }
   }
