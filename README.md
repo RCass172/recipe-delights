@@ -200,6 +200,53 @@ I used MongoDB to store all the relevant data for the website. Below is the sche
 
 # **Deployment**
 
+### Forking The Repositary
+
+1. Open GitHub and find relevant [repository](https://github.com/RCass172/recipe-delights).
+2. On the top right click the fork button.
+3. This will now save a copy of the repository to your account which you can edit without changing original.
+
+### Making Local Clone
+
+1. Open GitHub and find relevant [repository](https://github.com/RCass172/recipe-delights).
+2. Click the download code dropdown.
+3. Using the clone HTTPS option copy the link provided.
+4. Open Git Bash and change working directory to location where you want cloned directory to go.
+5. Type `git clone` command and paste the clone link you had copied.
+
+### Heroku Deployment
+
+Firstly in order to deploy to Heroku it is important you create a requirements.txt file and a Procfile to let Heroku know what are the necessary dependencies to run the project
+
+- To create the requirements.txt file type the following command into the terminal window of the IDE you are using: `pip3 freeze --local > requirements.txt`
+
+- To create the Procile type the following command into the terminal window of the IDE that you are using: `echo web: python run.py > Procfile`
+
+1. go to [Heroku](https://heroku.com) and login to your own account
+2. click the "new" button > "create new app"
+3. Create an app name and select your nearest region
+
+- Connect the Github repository to our Heroku app
+
+1. Click the "deploy" tab on your dashboard
+2. Under the deployment method section select GitHub
+3. Under the prompt to find the GitHub repository to connect to enter the name of the repository and click connect
+
+- Add the environment variables
+
+1. Click the "settings" tab on your dashboard
+2. Click on "reveal config vars" and add the following:
+    - key: IP, Value: 0.0.0.0
+    - key: PORT, Value: 5000
+    - key: MONGO_DBNAME, value(Name of the database you are connecting to)
+    - key: MONGO_URI, value(The Mongo URI can be found in MongoDB by going to clusters > click on connect and connect to your app > change the password and the databse name to what you set)
+    - key: SECRET_KEY, value(A custom secret key of your own choosing which is used to keep sessions secure)
+
+- Enable automatic deployment 
+
+1. Click on the "deploy" tab
+2. In the automatic deployment section, choose the branch you want to deploy from the GitHub repository and then click on the "enable automatic deploy" button
+
 ---
 
 # **Credits**
