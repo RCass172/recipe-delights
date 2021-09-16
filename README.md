@@ -62,7 +62,7 @@ As a user I would like:
 ## **Design**
 
 * Hero Image - The table setting used for the hero image was chosen to relate to the website and colors matched in with the overall theme.
-* Colors - I wanted to use rich colors to give an elegant feeling to match the overall theme. Using [Coolors](https://coolors.co/) color palette generater i was able to find the below set which i was happy with.
+* Colors - I wanted to use rich colors to give an elegant feeling to match the overall theme. Using [Coolors](https://coolors.co/) color palette generater I was able to find the below set which i was happy with.
 
 ![Color Theme Image](static/images/README/colorThemes.png)
 
@@ -156,6 +156,10 @@ Once logged in as an admin user all the above feature are relevant plus:
 ---
 
 # **Database**
+
+I used MongoDB to store all the relevant data for the website. Below is the schema I used:
+
+  ![Database Layout](static/images/README/database-layout.png)
 
 ---
 
