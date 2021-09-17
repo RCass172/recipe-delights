@@ -81,7 +81,7 @@ As a user I would like:
   - The website has a fixed navbar with clickable logo and website name which will take the user back to the homepage
   - There is a dropdown for the recipes which have all recipe categories
   - There is a register and login button for users depending if it's a new or returning user
-  - The navbar is responsive when on smaller devices from ipads down with menu items being shown once the burger icon is clicked
+  - The navbar is responsive when on small devices from Ipads and smaller with menu items being shown once the burger icon is clicked
 
 - Responsive Layout
   - The layout is responsive on all different sized devices from mobiles to desktops, in order to make all content easily readable and for best aesthetics
@@ -108,7 +108,7 @@ As a user I would like:
     ![Back To Top](static/images/README/back-to-top.png)
 
 - Footer
-  - The footer which is fixed to the buttom of page includes the social media links for user to follow. These links use a hover effect for visual feedback and on clicking will open a new tab
+  - The footer which is fixed to the bottom of page includes the social media links for user to follow. These links use a hover effect for visual feedback and on clicking will open a new tab
 
 - Error pages
   - Error pages have been made in case of pages not being found, no authorisation to enter a certain page or server being down. A button to take user back to the homepage is also present
@@ -122,7 +122,7 @@ All registered users have all the above features with added:
 
 - User Profile
   - On registering or logging in a user is brought to their homepage where any recipes they add will be saved.
-  - An added nav menu item of "Add Recipe" is now visable to users logged in to easily add a new recipe. A button is also shown once the user is on their profile page to make is easy to add a recipe
+  - An added nav menu item of "Add Recipe" is now visible to users logged in to easily add a new recipe. A button is also shown once the user is on their profile page to make is easy to add a recipe
 
     ![Add Button](static/images/README/add-btn.png)
 
@@ -138,14 +138,14 @@ Once logged in as an admin user all the above feature are relevant plus:
 
 - Admin Management
   - Once on the admin profile page the user has the power to add, edit or delete any recipe categories by clicking on "Go To Category" button
-  - Buttons to "Add Category", "Edit" and "Delete" are found on the recipe categories page which is only visable to an admin user
+  - Buttons to "Add Category", "Edit" and "Delete" are found on the recipe categories page which is only visible to an admin user
 
     ![Admin Category](static/images/README/admin-category.png)
 
 ## **Future Features**
 
 - Favorite Recipes
-  - As seen in my initial wireframes above I had hoped to include a favorite button to the recipes in order for users to save them to their profile. Unfortunatly due to lack of time and knowledge it wasn't something I was able to implement but would love to add in the future. This would allow users to save their favorite recipes and easily find them at a later date
+  - As seen in my initial wireframes above I had hoped to include a favorite button to the recipes in order for users to save them to their profile. Unfortunately due to lack of time and knowledge it wasn't something I was able to implement but would love to add in the future. This would allow users to save their favorite recipes and easily find them at a later date
 
 - Ratings and Comments
   - I would love to add a rating system and comment section to each recipe to help users better interact with others on the website and to get a better understanding of each recipe
@@ -202,7 +202,7 @@ You can find all testing information [here](https://github.com/RCass172/recipe-d
 
 # **Deployment**
 
-### Forking The Repositary
+### Forking The Repository
 
 1. Open GitHub and find relevant [repository](https://github.com/RCass172/recipe-delights).
 2. On the top right click the fork button.
@@ -224,8 +224,8 @@ Firstly in order to deploy to Heroku it is important you create a requirements.t
 
 - To create the Procile type the following command into the terminal window of the IDE that you are using: `echo web: python run.py > Procfile`
 
-1. go to [Heroku](https://heroku.com) and login to your own account
-2. click the "new" button > "create new app"
+1. Go to [Heroku](https://heroku.com) and login to your own account
+2. Click the "new" button > "create new app"
 3. Create an app name and select your nearest region
 
 - Connect the Github repository to our Heroku app
@@ -241,7 +241,7 @@ Firstly in order to deploy to Heroku it is important you create a requirements.t
     - key: IP, Value: 0.0.0.0
     - key: PORT, Value: 5000
     - key: MONGO_DBNAME, value(Name of the database you are connecting to)
-    - key: MONGO_URI, value(The Mongo URI can be found in MongoDB by going to clusters > click on connect and connect to your app > change the password and the databse name to what you set)
+    - key: MONGO_URI, value(The Mongo URI can be found in MongoDB by going to clusters > click on connect and connect to your app > change the password and the database name to what you set)
     - key: SECRET_KEY, value(A custom secret key of your own choosing which is used to keep sessions secure)
 
 - Enable automatic deployment 

@@ -54,14 +54,14 @@
       ![Print Button](static/images/TESTING/print-btn.png)
 
 9. To easily add a new recipe to any recipe category
-    - Once the user logs in they are taken to their prifile page which has a add recipe button plus the navbar has an add recipe menu button to access page easily.
-    - Once on the add recipe page the user can then fill out form which will send all data back to MongoDB and save the recipe to it's relevant category list.
+    - Once the user logs in they are taken to their profile page which has a add recipe button plus the navbar has an add recipe menu button to access page easily.
+    - Once on the add recipe page the user can then fill out form which will send all data back to MongoDB and save the recipe to its relevant category list.
     - All input fields are required with a default image URL placed in the recipe image URL input for users unable to add their own.
     - Ingredient and Method inputs have a dynamically adding button to enter more than one of each.
 
 10. To easily edit or delete any added recipes as needed
     - Users can edit or delete any recipes they have added once they are on their profile page, where a list of all their recipes are displayed. Each recipe card has their own edit and delete button.
-    - On clicking the edit button the page will open up relevant page which has all the recipe details filled in, this makes it's easier for user to edit what they need.
+    - On clicking the edit button the page will open up relevant page which has all the recipe details filled in, this makes it easier for user to edit what they need.
     - On clicking the delete button the recipe will be removed from the database and users profile.
 
 11. Informative validation feedback
@@ -69,12 +69,12 @@
 
 12. To have the ability to add a new recipe category when logged in as admin
     - Once the admin user is logged in they are brought straight to their profile page where they can find a button to bring them to the category list.
-    - Once there, a button is present to easily add a new categorgy which will open the add category page with relevant form.
+    - Once there, a button is present to easily add a new category which will open the add category page with relevant form.
     - The user must then enter a category name and image URL which is then used on the category page. The category name is then dynamically added to the recipe dropdown menu showing all categories.
 
 13. To have the ability to edit or delete any existing recipe categories as needed when logged in as admin
     - As above once user goes to categories page the edit and delete button are shown on each category card.
-    - On clicking the edit button the page will open up relevant page which has all the category details filled in, this makes it's easier for user to edit what they need.
+    - On clicking the edit button the page will open up relevant page which has all the category details filled in, this makes it easier for user to edit what they need.
     - On clicking the delete button the category will be removed from the database and website.
 
       ![Category Button](static/images/TESTING/category-btn.png)
@@ -95,7 +95,7 @@
 
     ![CSS validation results](static/images/TESTING/css-validator.png)
 
-- I used [JsHint](https://jshint.com/) to test the script.js code which returned the below warning of a missing semicolon. I removed the `function() {}` which did remove the warning but unfortunatley the function didn't work. As I had help with the code for the function from [here](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp) I left it as is in order to work correctly.
+- I used [JsHint](https://jshint.com/) to test the script.js code which returned the below warning of a missing semicolon. I removed the `function() {}` which did remove the warning but unfortunately the function didn't work. As I had help with the code for the function from [here](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp) I left it as is in order to work correctly.
 
     ![JS validation results](static/images/TESTING/js-validator.png)
 
@@ -113,12 +113,12 @@ The website was tested using Google Chrome's Dev Tools to check if the website d
   2. Galaxy S5
   3. Pixel 2
   4. Pixel 2 XL
-  5. iPhone 5/SE
-  6. iPhone 6/7/8
-  7. iPhone 6/7/8 Plus
-  8. iPhone X
-  9. iPad
-  10. iPad Pro
+  5. IPhone 5/SE
+  6. IPhone 6/7/8
+  7. IPhone 6/7/8 Plus
+  8. IPhone X
+  9. IPad
+  10. IPad Pro
   11. Surface Duo
   12. Galaxy Fold
 
@@ -130,7 +130,7 @@ The website was tested on real devices with the following OS:
 
   1. Windows 10
   2. Android
-  3. iOS
+  3. IOS
 
 _Results were good and as expected_
 
@@ -180,7 +180,7 @@ Overall I was happy everything functioned as it should.
 
     ![Created By Bug Code](static/images/TESTING/created-by-bug-code.png)
 
-- On carrying out the Lighthouse performance test it showed a contrast ratio issue regarging the search bar. I changed the label text to a white color so it stood out better for users.
+- On carrying out the Lighthouse performance test it showed a contrast ratio issue regarding the search bar. I changed the label text to a white color so it stood out better for users.
 
     ![Contrast Ratio Bug](static/images/TESTING/bug-contrast-ratio.png)
 
