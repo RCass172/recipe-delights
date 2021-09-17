@@ -91,7 +91,7 @@
 
       ![HTML Validation Results](static/images/TESTING/html-validation-result.png)
 
-- I used [Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/validator) to test the style.css code which returned no errors as shown below:
+- I used [Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input) to test the style.css code which returned no errors as shown below:
 
     ![CSS validation results](static/images/TESTING/css-validator.png)
 
