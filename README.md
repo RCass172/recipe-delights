@@ -253,6 +253,43 @@ Firstly in order to deploy to Heroku it is important you create a requirements.t
 
 # **Credits**
 
+## Content
+
+***Photos***
+  - Photo by Fu Zhichao from Pexels - [Afternoon Tea](https://www.pexels.com/photo/white-steel-cupcake-stand-587741/)
+  - Photo by Emrah Tolu from Pexels - [Brunch](https://www.pexels.com/photo/fried-egg-beside-bread-platter-2662875/)
+  - Photo by Askar Abayev from Pexels - [Dinner Party](https://www.pexels.com/photo/friends-having-delicious-dinner-with-drinks-served-on-wooden-table-5638730/)
+  - Photo by Ahmad Syahrir from Pexels - [Cocktails](https://www.pexels.com/photo/four-cocktail-glasses-on-brown-wooden-surface-605408/)
+  - Photo by Rachel Claire from Pexels - [Hero Image](https://www.pexels.com/photo/row-of-stools-next-to-long-table-covered-with-tablecloth-in-dark-hall-4577179/)
+  - Photo by Markus Distelrath from Pexels - [Error Page Image](https://www.pexels.com/photo/grey-bird-in-close-up-photography-2233442/)
+
+***Recipes***
+  - All recipes content and photos taken from [BBC Good Food](https://www.bbcgoodfood.com/)
+  - [Brioche Bake Recipe](https://www.bbcgoodfood.com/recipes/brioche-breakfast-bake-crispy-bacon) and [Image](https://images.immediate.co.uk/production/volatile/sites/30/2020/08/brioche-breakfast-bake-with-crispy-bacon-7bf0b52.jpg?quality=90&webp=true&resize=375,341)
+  - [Courgette Ricotta Fritters Recipe](https://www.bbcgoodfood.com/recipes/courgette-ricotta-fritters-with-poached-eggs-harissa-yogurt) and [Image](https://images.immediate.co.uk/production/volatile/sites/30/2021/06/Courgette-and-ricotta-fritters-with-poached-eggs-and-harissa-yogurt-92ecc92.jpg?quality=90&webp=true&resize=375,341)
+  - [Baked Camembert Recipe](https://www.bbcgoodfood.com/recipes/baked-camembert) and [Image](https://images.immediate.co.uk/production/volatile/sites/30/2020/08/baked_camembert-de29cd6.jpg?quality=90&webp=true&resize=375,341)
+  - [Beef Ragout Recipe](https://www.bbcgoodfood.com/recipes/beef-ragout) and [Image](https://images.immediate.co.uk/production/volatile/sites/30/2020/08/beef-ragout-c9c8bd0.jpg?quality=90&webp=true&resize=375,341)
+  - [Chocolate Molten Cakes Recipe](https://www.bbcgoodfood.com/recipes/easy-chocolate-molten-cakes) and [Image](https://images.immediate.co.uk/production/volatile/sites/30/2020/08/easy-chocolate-molten-cakes-37a25eb.jpg?quality=90&webp=true&resize=375,341)
+  - [Fruit Scones Recipe](https://www.bbcgoodfood.com/recipes/fruit-scones) and [Image](https://images.immediate.co.uk/production/volatile/sites/30/2020/08/fruit-scones-82fc434.jpg?quality=90&webp=true&resize=375,341)
+  - [Tea Cake Recipe](https://www.bbcgoodfood.com/recipes/raspberry-pistachio-tea-cake) and [Image](https://images.immediate.co.uk/production/volatile/sites/30/2020/08/raspberry-pistachio-tea-cake-ae91f5f.jpg?quality=90&webp=true&resize=375,341)
+  - [Hurricane Cocktail Recipe](https://www.bbcgoodfood.com/recipes/hurricane-cocktail) and [Image](https://images.immediate.co.uk/production/volatile/sites/30/2020/08/hurricane-62b2c43.jpg?quality=90&webp=true&resize=375,341)
+  - [Jessica Rabbit Cocktail Recipe](https://www.bbcgoodfood.com/recipes/jessica-rabbit-cocktail) and [Image](https://images.immediate.co.uk/production/volatile/sites/30/2021/03/jessica-rabbit-f053c39.jpg?quality=90&webp=true&resize=375,340)
+
+## Code 
+
+- Code Institute Task Manager walkthrough was used as a basis for the website
+- Help to dynamically add text fields in the add recipe form using JQuery was found [Here](https://jquerylove.com/content/how-to-use-jquery-to-dynamically-add-text-field-in-form-2004/)
+- Help to create a function for a scroll back to top of page button was found [Here](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp)
+- Help with functioning Error pages was found [Here](https://flask-doc.readthedocs.io/en/latest/patterns/errorpages.html)
+- Help to create a categories global variable was found [Here](https://liutheprogrammer.wordpress.com/2019/09/18/flask-templates-define-global-variables-for-template-usage/)
+- Help to fix a duplicate ID error was found [Here](https://stackoverflow.com/questions/20233721/how-do-you-index-on-a-jinja-template)
+
 ---
 
 # **Acknowledgments**
+
+I would like to firstly thank my mentor Victor Miclovich who guided me throughout this project and helped point me in the right direction making it a great learning experience. His opinions and help to understand anything I was unsure about was always greatly appreciated.
+
+To my family and friends who helped provide great and honest feedback throughout the project.
+
+And finally thanks to the slack community for whenever I got stuck on a problem, research always pointed me in the right direction.
