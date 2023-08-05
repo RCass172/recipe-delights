@@ -2,7 +2,7 @@
 
 ![webpage layout on devices](static/images/README/device-layout.png)
 
-[Link to Website](https://recipe-delights-ms3.herokuapp.com/)
+[Link to Website](https://recipe-delights.onrender.com/)
 
 ---
 
@@ -216,7 +216,7 @@ You can find all testing information [here](https://github.com/RCass172/recipe-d
 4. Open Git Bash and change working directory to location where you want cloned directory to go.
 5. Type `git clone` command and paste the clone link you had copied.
 
-### Heroku Deployment
+### Heroku Deployment **(Later changed to Render****)
 
 Firstly in order to deploy to Heroku it is important you create a requirements.txt file and a Procfile to let Heroku know what are the necessary dependencies to run the project
 
@@ -248,6 +248,33 @@ Firstly in order to deploy to Heroku it is important you create a requirements.t
 
 1. Click on the "deploy" tab
 2. In the automatic deployment section, choose the branch you want to deploy from the GitHub repository and then click on the "enable automatic deploy" button
+
+****Updated Render Deployment**
+1. Go to [Render](https://render.com/) and create/login to your own account
+2. Click the "New +" button > "Web Service"
+3. Search the relevant repository and click "Connect"
+![Connect To Github Repo](static/images/README/connect.PNG)
+
+
+4. Add the following settings and then "Create Web Service"
+    - Name: (unique name for project)
+    - Region: Frankfort (EU Central)
+    - Branch: main
+    - Root Directory: *leave blank
+    - Runtime: Python 3
+    - Build command: pip install -r requirements.txt
+    - Start command: python app.py
+    - Select the free plan type
+
+
+5. Click the "Environment" tab on side menu
+
+- Add the following environment variables
+    - key: IP, value: 0.0.0.0
+    - key: PORT, value: 5000
+    - key: MONGO_DBNAME, value: *Got from logging into Heroku > Settings > Reveal Config Vars
+    - key: MONGO_URI, value: *Got from logging into Heroku > Settings > Reveal Config Vars
+    - key: SECRET_KEY, value: *Got from logging into Heroku > Settings > Reveal Config Vars
 
 ---
 
